@@ -12,7 +12,7 @@ const UserProfile: React.FC = () => {
     username: "",
     email: "",
     full_name: "",
-    role: "employee" as "admin" | "employee",
+    role: "member" as "admin" | "member",
     currentPassword: "",
     newPassword: "",
     confirmPassword: "",
@@ -222,7 +222,7 @@ const UserProfile: React.FC = () => {
                 <span className="profile-detail-value">
                   {currentUser.role === "admin"
                     ? "Admin"
-                    : "Employee"}
+                    : "Member"}
                 </span>
               </div>
               <div className="profile-detail-item">
@@ -315,7 +315,7 @@ const UserProfile: React.FC = () => {
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="employee">Employee</option>
+                    <option value="member">Member</option>
                     <option value="admin">Admin</option>
                   </select>
                 </div>

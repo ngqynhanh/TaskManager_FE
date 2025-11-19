@@ -4,7 +4,7 @@ export interface IUser {
     username: string;
     email: string;
     full_name: string;
-    role: 'admin' | 'employee';
+    role: 'admin' | 'member';
     created_at: string; // Sử dụng string cho TIMESTAMP/DateTime
     is_active: boolean;
 }

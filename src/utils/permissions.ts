@@ -12,7 +12,7 @@ export const isAdmin = (user: IUser | null): boolean => {
  * Check if user is employee
  */
 export const isEmployee = (user: IUser | null): boolean => {
-  return user?.role === "employee";
+  return user?.role === "member";
 };
 
 /**
@@ -40,7 +40,7 @@ export const canDeleteTask = (user: IUser | null): boolean => {
  * Check if user can view a task
  */
 export const canViewTask = (user: IUser | null): boolean => {
-  return user !== null; // Both admin and employee can view all tasks
+  return user !== null; // Both admin and member can view all tasks
 };
 
 /**
@@ -68,11 +68,11 @@ export const canUpdateTaskStatus = (
  * Check if user can add comments to a task
  */
 export const canAddComment = (user: IUser | null): boolean => {
-  return user !== null; // Both admin and employee can add comments
+  return user !== null; // Both admin and member can add comments
 };
 
 /**
- * Check if user can assign employees to tasks
+ * Check if user can assign members to tasks
  */
 export const canAssignEmployees = (user: IUser | null): boolean => {
   return isAdmin(user);

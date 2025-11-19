@@ -100,7 +100,7 @@ const Team: React.FC = () => {
                           : "role-member"
                       }`}
                     >
-                      {user.role === "admin" ? "Admin" : "Employee"}
+                      {user.role === "admin" ? "Admin" : "Member"}
                     </span>
                     <span
                       className={`member-status ${
